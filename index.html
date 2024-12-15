@@ -318,7 +318,7 @@ img {
         
         <div id="practice-content" class="dar-content">
             Сона в первую очередь про перетекание, изменение формы, причем на первый взгляд может показаться даже абсурдным и неподдающимся логике. Здесь дайте волю своему воображению, можете понаблюдать сюрреализм, чтобы глубже понять дар. <br>
-            <a href="https://github.com/miplix/glavnaya_dar" class="practice-link">медитация</a>
+            <a href="https://miplix.github.io/glavnaya_dar/" class="practice-link">медитация</a>
             <a class="hide-link" onclick="hideContent('practice')">скрыть</a>
         </div>
 
@@ -349,3 +349,17 @@ window.toggleContent = function(type) {
         // Otherwise show the new content and activate the button
         content.style.display = 'block';
         button.classList.add('active');
+       }
+    };
+    
+    window.hideContent = function(type) {
+        const contentId = type + '-content';
+        const content = document.getElementById(contentId);
+        const button = document.querySelector(`[onclick="toggleContent('${type}')"]`);
+        
+        content.style.display = 'none';
+        button.classList.remove('active');
+    };
+    </script>
+    
+    </body></html>
